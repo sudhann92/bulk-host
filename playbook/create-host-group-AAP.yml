@@ -3,7 +3,9 @@
     hosts: AAP
     gather_facts: no
     collections:
-       - awx.awx
+       #- awx.awx
+      - ansible.controller
+      - infra.controller_configuration
 
     pre_tasks:
     - name: Checking the Controller Host/Groups/Inventory variable values
