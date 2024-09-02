@@ -3,8 +3,8 @@
     hosts: AAP
     gather_facts: no
     collections:
-       #- awx.awx
-      - ansible.controller
+      - awx.awx
+      #- ansible.controller
       - infra.controller_configuration
 
     pre_tasks:
