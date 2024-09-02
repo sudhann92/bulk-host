@@ -7,7 +7,7 @@
 
       - name: Create token
         uri:
-          url: "http://localhost/api/tokens"
+          url: "https://localhost/api/tokens"
           method: POST
           headers:
             Content-Type: "application/json"
