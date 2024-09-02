@@ -7,7 +7,7 @@
 
       - name: Create token
         uri:
-          url: "https://localhost/api/v2/tokens"
+          url: "https://control-443-bjubaylmtpfn.env.play.instruqt.com/v2/tokens"
           method: POST
           headers:
             Content-Type: "application/json"
