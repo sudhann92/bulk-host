@@ -1,0 +1,22 @@
+---
+  - name: Create the bulk host and Group creation in AAP controller
+    hosts: AAP
+    gather_facts: no
+
+    tasks:
+
+      - name: Create token
+        uri:
+          url: "http://localhost/api/tokens"
+          method: POST
+          headers:
+            Content-Type: "application/json"
+          body: '{"username": "admin", "password": "ansible123!"}'
+          body_format: json
+          return_content: yes
+        register: result
+        ignore_errors: yes  # Add this to continue playbook execution even on failure
+
+      - name: Debug response
+        debug:
+          var: result
