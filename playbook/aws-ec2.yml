@@ -10,7 +10,7 @@
      port: 22
      delay: 5
      timeout: 5
-    delegate_to: localhost
+    #delegate_to: localhost
     register: ping_status
     ignore_errors: yes
 
