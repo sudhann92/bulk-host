@@ -1,0 +1,18 @@
+---
+- hosts: "{{ HOSTS }}"
+  become: yes
+  vars:
+    report_server: rhel1
+
+  tasks:
+  - wait_for:
+     host: "{{ inventory_hostname }}"
+     port: 22
+     delay: 5
+     timeout: 5
+    delegate_to: localhost
+    register: ping_status
+    ignore_errors: yes
+
+  - debug:
+      msg: "{{ ping_status }}"
