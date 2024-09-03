@@ -6,7 +6,7 @@
 
   tasks:
   - wait_for:
-     host: 127.0.0.1
+     #host: 127.0.0.1
      port: 22
      delay: 5
      timeout: 5
