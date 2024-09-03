@@ -1,12 +1,12 @@
 ---
-- hosts: "{{ HOSTS }}"
+- hosts: localhost
   become: yes
   vars:
     report_server: rhel1
 
   tasks:
   - wait_for:
-     host: "{{ inventory_hostname }}"
+     host: 127.0.0.1
      port: 22
      delay: 5
      timeout: 5
