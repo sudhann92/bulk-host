@@ -40,5 +40,5 @@
             description: "Create the bulk host and Group creation in AAP controller"
             Number_of_host_deleted: "{{host_value|default([])|length}}"
             Number_of_group_deleted: "{{ group_value| default([]) length }}"
-            Manual_time_efforts_Mins: "{{ (host_value|default([])|length * 1 ) + (group_value| length * 1) }}"
+            Manual_time_efforts_Mins: "{{ (host_value|default([])|length * 1 ) + (group_value|default([])|length * 1) }}"
         aggregate: no
