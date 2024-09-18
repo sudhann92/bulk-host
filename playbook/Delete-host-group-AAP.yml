@@ -12,8 +12,9 @@
             # - controller_host_device_name|default('', true) != ''
             # - controller_groups_name|default('', true) != '' 
             - controller_inventory_name|default('', true) != ''
-          fail_msg: "controller_inventory_name should not be empty"
-          success_msg: " Variable 'controller_inventory_name' passed value validation!"
+            - controller_state|default('', true) != ''
+          fail_msg: "controller_inventory_name and controller_state should not be empty"
+          success_msg: "Variable 'controller_inventory_name' and 'controller_state' passed value validation!"
 
 
      tasks:
@@ -30,7 +31,7 @@
              name: group_deletion
        vars:
          group_value: "{{ controller_groups_name.strip().split(',') }}"
-       when: controller_groups_name|length != 0
+       when: controller_groups_name is defined and controller_groups_name|length != 0
 
   
     - name: Metadata Manual Time efforts

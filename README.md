@@ -117,6 +117,7 @@ controller_groups_name:
 controller_inventory_name: "<Name of the inventory>"
 controller_host_device_name: "<Name of the device>"
 controller_groups_name: "<Name of the group>"
+controller_state: "<status of the host and group its should be absent"
 ```
 
 ## Example:
